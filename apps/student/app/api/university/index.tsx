@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const API_URL: any = 'http://localhost:3001/api/destination/all';
+const API_URL: any = process.env.NEXT_PUBLIC_API_URL;
 
 export const fetchUniversityByDestination = async ({ country }: any) => {
   try {
     const response = await axios.get(
-      `http://localhost:3001/api/destination/fetchUniversity/${country}`
+      `${API_URL}/destination/fetchUniversity/${country}`
     );
     return response.data.data;
   } catch (error) {
@@ -16,9 +16,7 @@ export const fetchUniversityByDestination = async ({ country }: any) => {
 
 export const fetchUniversityBySlug = async ({ uni }: any) => {
   try {
-    const response = await axios.get(
-      `http://localhost:3001/api/university/${uni}`
-    );
+    const response = await axios.get(`${API_URL}/university/${uni}`);
     console.log(response, 'response');
     return response.data;
   } catch (error) {
@@ -29,9 +27,7 @@ export const fetchUniversityBySlug = async ({ uni }: any) => {
 
 export const fetchAllUniversity = async () => {
   try {
-    const response = await axios.get(
-      `http://localhost:3001/api/university/all`
-    );
+    const response = await axios.get(`${API_URL}/university/all`);
     return response.data;
   } catch (error) {
     console.error('Failed to fetch courses:', error);
@@ -44,7 +40,7 @@ export const fetchUniversityByCourse = async ({
   destination,
 }: any) => {
   try {
-    let url = `http://localhost:3001/api/university/course/${subjectName}`;
+    let url = `${API_URL}/university/course/${subjectName}`;
 
     if (destination) {
       url += `?destination=${destination}`;
@@ -58,7 +54,7 @@ export const fetchUniversityByCourse = async ({
   }
 };
 
-export const fetchUniversitiesByIds = async (ids) => {
+export const fetchUniversitiesByIds = async ({ ids }: any) => {
   try {
     console.log(ids, 'ids');
     // Concatenate all arrays into a single array
@@ -74,7 +70,7 @@ export const fetchUniversitiesByIds = async (ids) => {
     console.log(parsedIds, 'parsedIds');
 
     const response = await axios.get(
-      `http://localhost:3001/api/university/multiple/${parsedIds}`
+      `${API_URL}/university/multiple/${parsedIds}`
     );
 
     return response.data; // Return response data directly
@@ -84,7 +80,7 @@ export const fetchUniversitiesByIds = async (ids) => {
   }
 };
 
-export const fetchUniversitiesByIdsForComapre = async (ids) => {
+export const fetchUniversitiesByIdsForComapre = async ({ ids }: any) => {
   try {
     console.log(ids, 'ids');
     // Concatenate all arrays into a single array
@@ -97,7 +93,7 @@ export const fetchUniversitiesByIdsForComapre = async (ids) => {
     console.log(joinedString, 'joinedString');
 
     const response = await axios.get(
-      `http://localhost:3001/api/university/multiple/${joinedString}`
+      `${API_URL}/university/multiple/${joinedString}`
     );
 
     return response.data; // Return response data directly

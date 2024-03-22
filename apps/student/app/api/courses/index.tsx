@@ -1,23 +1,21 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:3001/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const fetchCourses = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/courses/all`);
+    const response = await axios.get(`${API_URL}/courses/all`);
     return response.data.data;
   } catch (error) {
-    console.error('Failed to fetch courses:', error.message);
     throw new Error('Failed to fetch courses');
   }
 };
 
 const fetchSubjectByCourse = async ({ course }: any) => {
   try {
-    const response = await axios.get(`${BASE_URL}/courses/subject/${course}`);
+    const response = await axios.get(`${API_URL}/courses/subject/${course}`);
     return response;
   } catch (error) {
-    console.error('Failed to fetch subjects by course:', error.message);
     throw new Error('Failed to fetch subjects by course');
   }
 };
@@ -33,7 +31,7 @@ const fetchCourseByLevel = async ({
 }): Promise<any> => {
   console.log(degree, 'degree');
   try {
-    let url = `${BASE_URL}/courses/level/${degree}`;
+    let url = `${API_URL}/courses/level/${degree}`;
     const queryParams: string[] = [];
 
     if (universityId) {
@@ -50,7 +48,6 @@ const fetchCourseByLevel = async ({
     const response = await axios.get(url);
     return response.data;
   } catch (error) {
-    console.error('Failed to fetch courses by level:', error.message);
     throw new Error('Failed to fetch courses by level');
   }
 };
