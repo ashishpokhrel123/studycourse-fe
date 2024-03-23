@@ -6,7 +6,7 @@
     "start:admin": "nx serve admin",
     "start:student": " nx serve student",
     "build:admin": "nx build admin",
-    "build:student": "nx build sc-student --verbose",
+    "build:student": "nx build student",
     "servebuild:student": "rm -rf dist && yarn && yarn build:travel && cd dist/apps/sc-student && yarn && yarn start",
     "servebuild:admin": "rm -rf dist && yarn && yarn build:admin && cd dist/apps/jewel-admin && yarn && yarn start"
   },
