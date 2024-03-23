@@ -7,8 +7,8 @@
     "start:student": " nx serve student",
     "build:admin": "nx build admin",
     "build:student": "nx build student",
-    "servebuild:student": "rm -rf dist && yarn && yarn build:travel && cd dist/apps/sc-student && yarn && yarn start",
-    "servebuild:admin": "rm -rf dist && yarn && yarn build:admin && cd dist/apps/jewel-admin && yarn && yarn start"
+    "servebuild:student": "rm -rf dist && yarn && yarn build:student && cd dist/apps/student && yarn && yarn start",
+    "servebuild:admin": "rm -rf dist && yarn && yarn build:admin && cd dist/apps/admin && yarn && yarn start"
   },
   "private": true,
   "devDependencies": {
