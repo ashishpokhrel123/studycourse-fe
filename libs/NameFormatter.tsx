@@ -1,9 +1,8 @@
 import { Tooltip } from 'antd';
-import React = require('react');
 
 interface IProps {
-  firstName?: string;
-  lastName?: string;
+  firstName: string;
+  lastName: string;
 }
 
 export function capitalizeInitials(str?: string) {

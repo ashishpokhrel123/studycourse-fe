@@ -16,7 +16,14 @@ export default function JTLoader({ visible }: any) {
       <div className="text-center">
         <Spin
           className="mt-6"
-          indicator={<LoadingOutlined style={{ fontSize: 34 }} spin />}
+          indicator={
+            <LoadingOutlined
+              style={{ fontSize: 34 }}
+              spin
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            />
+          }
         />
         <h1>Loading...</h1>
       </div>

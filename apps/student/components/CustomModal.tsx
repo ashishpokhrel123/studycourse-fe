@@ -211,7 +211,7 @@ const CustomModal = ({ visible, onClose }: any) => {
                 <span>Courses Avaiable</span>
                 <br />
                 <Typography.Text className="font-semibold">
-                  {uni?.courses.map((course, index) => (
+                  {uni?.courses.map(({ course, index }: any) => (
                     <span key={course.id}>
                       {course.courseName}
                       {index !== uni.courses.length - 1 && <br />}

@@ -6,11 +6,12 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const capitalizeFirstLetter = (str) => {
+export const capitalizeFirstLetter = ({str}:any) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-export function formatUniversitySlug(name) {
-  const capitalized = name.split('-').map(word => capitalizeFirstLetter(word)).join(' ');
+export function formatUniversitySlug({ name }: any) {
+  const capitalized = name.split('-').map((word: string) => capitalizeFirstLetter(word)).join(' ');
   return capitalized.replace(/-/g, '');
 }
+

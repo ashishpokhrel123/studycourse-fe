@@ -11,7 +11,11 @@ import { fetchUniversity } from 'apps/admin/app/api/University';
 const ActionColumn = ({ id }: { id: string }) => (
   <Space size="middle" className="test">
     <Link href={`/blogs/edit/${id}`} passHref>
-      <EditTwoTone className="text-2xl" />
+      <EditTwoTone
+        className="text-2xl"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      />
     </Link>
   </Space>
 );
@@ -43,7 +47,11 @@ function UniversityList() {
     return (
       <Space size="middle" className="test">
         <Link href={`/university/edit?id=${id}`} passHref>
-          <EditTwoTone className="text-2xl" />
+          <EditTwoTone
+            className="text-2xl"
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+          />
         </Link>
       </Space>
     );

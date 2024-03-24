@@ -116,16 +116,26 @@ const SCUpload = ({
                 >
                   {multiple ? (
                     <div>
-                      <PlusOutlined />
+                      <PlusOutlined
+                        onPointerEnterCapture={undefined}
+                        onPointerLeaveCapture={undefined}
+                      />
                       <div style={{ marginTop: 8 }}>Upload</div>
                     </div>
                   ) : (
                     (!field.value || field.value.length === 0) &&
                     (uploadLoad ? (
-                      <LoadingOutlined style={{ fontSize: 24 }} />
+                      <LoadingOutlined
+                        style={{ fontSize: 24 }}
+                        onPointerEnterCapture={undefined}
+                        onPointerLeaveCapture={undefined}
+                      />
                     ) : (
                       <div>
-                        <PlusOutlined />
+                        <PlusOutlined
+                          onPointerEnterCapture={undefined}
+                          onPointerLeaveCapture={undefined}
+                        />
                         <div style={{ marginTop: 8 }}>Upload</div>
                       </div>
                     ))

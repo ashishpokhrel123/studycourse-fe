@@ -41,7 +41,6 @@ interface Course {
 
 interface NavItemProps {
   category: Category;
-  destination: Destination;
   handleOpen: () => void;
   close: () => void;
   isCourse: boolean;

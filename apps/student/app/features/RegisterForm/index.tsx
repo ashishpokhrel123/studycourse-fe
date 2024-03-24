@@ -147,7 +147,7 @@ const RegisterForm = () => {
     }
   };
 
-  const handleCounselingOptionChange = (option) => {
+  const handleCounselingOptionChange = ({ option }: any) => {
     setCounselingOption(option);
     setValue('counselingOption', option); // Manually set the value in react-hook-form
   };

@@ -18,11 +18,19 @@ import { fetchCourses } from 'apps/admin/app/api/Course';
 const ActionColumn = ({ id }: any) => (
   <Space size="middle" className="test">
     <Link href={`/course/edit?id=${id}`} passHref>
-      <EditTwoTone className="text-2xl" />
+      <EditTwoTone
+        className="text-2xl"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      />
     </Link>
 
     <Button type="text" id="verificationModal">
-      <VerifiedOutlined className="text-2xl" />
+      <VerifiedOutlined
+        className="text-2xl"
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      />
     </Button>
   </Space>
 );

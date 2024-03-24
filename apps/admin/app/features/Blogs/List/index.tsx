@@ -35,7 +35,11 @@ function BlogsList() {
     return (
       <Space size="middle" className="test">
         <Link href={`/blogs/edit?id=${key}`} passHref>
-          <EditTwoTone className="text-2xl" />
+          <EditTwoTone
+            className="text-2xl"
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+          />
         </Link>
       </Space>
     );

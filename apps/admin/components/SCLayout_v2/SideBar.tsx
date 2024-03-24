@@ -62,7 +62,12 @@ export function SideBar() {
       key: 'logout',
       label: <p>Logout</p>,
       // onClick: logoutHandler,
-      icon: <LogoutOutlined />,
+      icon: (
+        <LogoutOutlined
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        />
+      ),
     },
   ];
 

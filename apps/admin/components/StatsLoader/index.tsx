@@ -1,5 +1,5 @@
-import { Col, Skeleton } from "antd";
-import React from "react";
+import { Col, Skeleton } from 'antd';
+import React from 'react';
 
 function StatsLoader() {
   return (

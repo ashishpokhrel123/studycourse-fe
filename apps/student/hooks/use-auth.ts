@@ -1,5 +1,5 @@
 import { useRouter } from 'next/navigation'
-import { toast } from 'sonner'
+import { notification } from 'antd'
 
 export const useAuth = () => {
   const router = useRouter()
@@ -19,12 +19,12 @@ export const useAuth = () => {
 
       if (!res.ok) throw new Error()
 
-      toast.success('Signed out successfully')
+      notification.success({message:'Signed out successfully'})
 
       router.push('/sign-in')
       router.refresh()
     } catch (err) {
-      toast.error("Couldn't sign out, please try again.")
+      notification.error({message:"Couldn't sign out, please try again."})
     }
   }
 

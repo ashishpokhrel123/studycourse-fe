@@ -1,9 +1,12 @@
-import Course from '../../features/Courses';
+import React from 'react';
+import Courses from '../../features/Courses';
 
-export default function course() {
+const Course = ({ searchParams }: any) => {
   return (
     <>
-      <Course />
+      <Courses searchParams={searchParams} />
     </>
   );
-}
+};
+
+export default Course;

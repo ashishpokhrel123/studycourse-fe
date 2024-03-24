@@ -83,8 +83,8 @@ const BlogDetails = ({ searchParams }: any) => {
                 by{' '}
                 <span className="font-medium">
                   <NameFormatter
-                    firstName={blogData?.author?.firstName}
-                    lastName={blogData?.author?.lastName}
+                    firstName={blogData?.author?.firstName || ''}
+                    lastName={blogData?.author?.lastName || ''}
                   />
                 </span>
               </div>
