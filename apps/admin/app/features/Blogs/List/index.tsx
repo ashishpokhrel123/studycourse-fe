@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect, useState } from 'react';
 import { Button, Space, Table, notification, Popconfirm, Switch } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
@@ -35,11 +34,7 @@ function BlogsList() {
     return (
       <Space size="middle" className="test">
         <Link href={`/blogs/edit?id=${key}`} passHref>
-          <EditTwoTone
-            className="text-2xl"
-            onPointerEnterCapture={''}
-            onPointerLeaveCapture={''}
-          />
+          <EditTwoTone className="text-2xl" />
         </Link>
       </Space>
     );

@@ -12,11 +12,7 @@ import { fetchStudents } from 'apps/admin/app/api/Students';
 const ActionColumn = ({ id }: { id: string }) => (
   <Space size="middle" className="test">
     <Link href={`/blogs/edit/${id}`} passHref>
-      <EditTwoTone
-        className="text-2xl"
-        onPointerEnterCapture={''}
-        onPointerLeaveCapture={''}
-      />
+      <EditTwoTone className="text-2xl" />
     </Link>
   </Space>
 );
