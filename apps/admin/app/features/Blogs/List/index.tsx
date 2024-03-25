@@ -37,8 +37,8 @@ function BlogsList() {
         <Link href={`/blogs/edit?id=${key}`} passHref>
           <EditTwoTone
             className="text-2xl"
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
+            onPointerEnterCapture={''}
+            onPointerLeaveCapture={''}
           />
         </Link>
       </Space>

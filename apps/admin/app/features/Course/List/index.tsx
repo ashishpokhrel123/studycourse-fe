@@ -20,16 +20,16 @@ const ActionColumn = ({ id }: any) => (
     <Link href={`/course/edit?id=${id}`} passHref>
       <EditTwoTone
         className="text-2xl"
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
+        onPointerEnterCapture={''}
+        onPointerLeaveCapture={''}
       />
     </Link>
 
     <Button type="text" id="verificationModal">
       <VerifiedOutlined
         className="text-2xl"
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
+        onPointerEnterCapture={''}
+        onPointerLeaveCapture={''}
       />
     </Button>
   </Space>
@@ -205,7 +205,7 @@ function CourseList() {
         //   total: 10,
         // }}
         // onChange={(pagination) => {
-        //   router.push(`/blogs?page=${pagination.current}`, undefined, {
+        //   router.push(`/blogs?page=${pagination.current}`, '', {
         //     shallow: true,
         //   });
         // }}

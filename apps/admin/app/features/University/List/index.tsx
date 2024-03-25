@@ -13,8 +13,8 @@ const ActionColumn = ({ id }: { id: string }) => (
     <Link href={`/blogs/edit/${id}`} passHref>
       <EditTwoTone
         className="text-2xl"
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
+        onPointerEnterCapture={''}
+        onPointerLeaveCapture={''}
       />
     </Link>
   </Space>
@@ -49,8 +49,8 @@ function UniversityList() {
         <Link href={`/university/edit?id=${id}`} passHref>
           <EditTwoTone
             className="text-2xl"
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
+            onPointerEnterCapture={''}
+            onPointerLeaveCapture={''}
           />
         </Link>
       </Space>
@@ -143,7 +143,7 @@ function UniversityList() {
           total: university.length,
         }}
         onChange={(pagination) => {
-          router.push(`/university?page=${pagination.current}`, undefined);
+          router.push(`/university?page=${pagination.current}`, '');
         }}
       />
     </AdminLayout>
