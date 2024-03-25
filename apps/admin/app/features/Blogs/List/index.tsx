@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState } from 'react';
 import { Button, Space, Table, notification, Popconfirm, Switch } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
